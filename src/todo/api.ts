@@ -59,3 +59,7 @@ todos.delete("/:id", async (c) => {
   todoList = todoList.filter((todo) => todo.id !== id)
   return new Response(null, { status: 204 })
 })
+
+todos.get("/no-coffee-yet",async (c:Context) => {
+  return c.json({message: "no yet. please wait a minute!"},200)
+})
